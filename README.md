@@ -1,83 +1,31 @@
-# Geektime Rust 语言训练营
+# 项目描述：
 
-## 环境设置
+使用 Rust 独立开发一款多功能命令行工具，涵盖 CSV 处理、加解密、文本操作等多项功能：
 
-### 安装 Rust
+为提升个人对 Rust 工具链和生态的掌握，设计并实现一款轻量、实用的 CLI 工具集合。
 
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
 
-### 安装 VSCode 插件
+#   项目实现：
+        使用 clap 和 structopt 构建多子命令 CLI 接口；
 
-- crates: Rust 包管理
-- Even Better TOML: TOML 文件支持
-- Better Comments: 优化注释显示
-- Error Lens: 错误提示优化
-- GitLens: Git 增强
-- Github Copilot: 代码提示
-- indent-rainbow: 缩进显示优化
-- Prettier - Code formatter: 代码格式化
-- REST client: REST API 调试
-- rust-analyzer: Rust 语言支持
-- Rust Test lens: Rust 测试支持
-- Rust Test Explorer: Rust 测试概览
-- TODO Highlight: TODO 高亮
-- vscode-icons: 图标优化
-- YAML: YAML 文件支持
+        实现 CSV 文件读取与筛选处理，支持字段筛选、行过滤；
 
-### 安装 cargo generate
+        开发 随机密码生成器，支持自定义长度与字符集；
 
-cargo generate 是一个用于生成项目模板的工具。它可以使用已有的 github repo 作为模版生成新的项目。
+        实现 Base64 编解码功能，兼容 UTF-8 文本与文件流；
 
-```bash
-cargo install cargo-generate
-```
+        实现简单 文本签名算法，并提供签名校验功能；
 
-在我们的课程中，新的项目会使用 `tyr-rust-bootcamp/template` 模版生成基本的代码：
+        集成 hyper 启动本地 HTTP 服务，支持文件浏览与文本返回。
 
-```bash
-cargo generate tyr-rust-bootcamp/template
-```
+# 项目成果：
 
-### 安装 pre-commit
+        代码结构模块化，具备良好扩展性；
 
-pre-commit 是一个代码检查工具，可以在提交代码前进行代码检查。
+        全面覆盖 Rust 多个核心生态库（serde, rand, base64, hyper 等），提升工程实践能力；
 
-```bash
-pipx install pre-commit
-```
+        面向 CLI 工具的实际需求，提升命令行 UX 与代码健壮性。
 
-安装成功后运行 `pre-commit install` 即可。
+# 🛠 技术关键词
 
-### 安装 Cargo deny
-
-Cargo deny 是一个 Cargo 插件，可以用于检查依赖的安全性。
-
-```bash
-cargo install --locked cargo-deny
-```
-
-### 安装 typos
-
-typos 是一个拼写检查工具。
-
-```bash
-cargo install typos-cli
-```
-
-### 安装 git cliff
-
-git cliff 是一个生成 changelog 的工具。
-
-```bash
-cargo install git-cliff
-```
-
-### 安装 cargo nextest
-
-cargo nextest 是一个 Rust 增强测试工具。
-
-```bash
-cargo install cargo-nextest --locked
-```
+Rust / clap / serde / tokio / base64 / CSV / HTTP / CLI 工具 / 模块化设计
